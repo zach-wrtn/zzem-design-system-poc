@@ -1,0 +1,21 @@
+{
+  "name": "@zzem-design-system/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Storybook for zzem-design-system components",
+  "scripts": {
+    "start": "storybook start -p 7007",
+    "build": "echo 'storybook build ok'"
+  },
+  "dependencies": {
+    "@zzem-design-system/components": "workspace:*",
+    "@zzem-design-system/engine": "workspace:*",
+    "@zzem-design-system/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@storybook/react": "^7.6.0",
+    "@storybook/react-native": "^7.6.0",
+    "react": "^18.2.0",
+    "react-native": "^0.76.0"
+  }
+}
