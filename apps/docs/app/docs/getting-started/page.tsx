@@ -16,7 +16,6 @@ export default async function GettingStartedPage() {
       <h2 id="installation" className="text-2xl font-semibold text-gray-900 dark:text-white mt-10 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">
         Installation
       </h2>
-      {/* @ts-expect-error Async Server Component */}
       <CodeBlock
         code="pnpm add @zzem-design-system/components @zzem-design-system/engine @zzem-design-system/tokens"
         language="bash"
@@ -29,7 +28,6 @@ export default async function GettingStartedPage() {
       <p className="text-gray-600 dark:text-gray-300 mb-4">
         앱의 루트에 <code className="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-pink-600 dark:text-pink-400">ZDSProvider</code>를 감싸세요.
       </p>
-      {/* @ts-expect-error Async Server Component */}
       <CodeBlock
         code={`import { ZDSProvider } from '@zzem-design-system/engine';
 
@@ -50,7 +48,6 @@ export default function App() {
       <p className="text-gray-600 dark:text-gray-300 mb-4">
         이제 컴포넌트를 사용할 준비가 되었습니다.
       </p>
-      {/* @ts-expect-error Async Server Component */}
       <CodeBlock
         code={`import { Button, Text, VStack } from '@zzem-design-system/components';
 
