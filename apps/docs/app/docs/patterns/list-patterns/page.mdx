@@ -1,0 +1,58 @@
+# List Patterns
+
+리스트 UI를 구성하는 패턴입니다.
+
+## Basic List Item
+
+Card와 HStack을 조합한 리스트 아이템 패턴입니다.
+
+```tsx
+<Card onPress={() => navigate(item.id)}>
+  <HStack gap={12} align="center">
+    <Avatar initials={item.name[0]} size="md" />
+    <VStack gap={2} style={{ flex: 1 }}>
+      <Text variant="label-md">{item.name}</Text>
+      <Text variant="body-sm" color={tokens.color.text.secondary}>
+        {item.description}
+      </Text>
+    </VStack>
+    <Badge variant="success" label={item.status} size="sm" />
+  </HStack>
+</Card>
+```
+
+## List with Divider
+
+Divider로 구분된 리스트 패턴입니다.
+
+```tsx
+<VStack>
+  {items.map((item, index) => (
+    <React.Fragment key={item.id}>
+      <ListItem item={item} />
+      {index < items.length - 1 && <Divider />}
+    </React.Fragment>
+  ))}
+</VStack>
+```
+
+## Tag Filter List
+
+Tag를 활용한 필터링 리스트 패턴입니다.
+
+```tsx
+<VStack gap={12}>
+  <HStack gap={8} wrap>
+    {filters.map((f) => (
+      <Tag
+        key={f}
+        label={f}
+        variant={activeFilter === f ? 'primary' : 'default'}
+        closable={activeFilter === f}
+        onClose={() => setActiveFilter(null)}
+      />
+    ))}
+  </HStack>
+  <FlatList data={filteredItems} renderItem={renderItem} />
+</VStack>
+```

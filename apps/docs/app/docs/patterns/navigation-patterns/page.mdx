@@ -1,0 +1,81 @@
+# Navigation Patterns
+
+앱 네비게이션을 구성하는 패턴입니다.
+
+## Tab-Based Navigation
+
+TabBar를 활용한 메인 네비게이션 패턴입니다.
+
+```tsx
+function AppNavigation() {
+  const [activeTab, setActiveTab] = useState('home');
+
+  return (
+    <SafeArea>
+      <ScreenContent tab={activeTab} />
+      <TabBar
+        items={[
+          { key: 'home', label: 'Home', icon: <HomeIcon /> },
+          { key: 'search', label: 'Search', icon: <SearchIcon /> },
+          { key: 'profile', label: 'Profile', icon: <UserIcon />, badge: 3 },
+        ]}
+        activeKey={activeTab}
+        onChange={setActiveTab}
+      />
+    </SafeArea>
+  );
+}
+```
+
+## Stack Navigation
+
+NavigationBar + Header를 활용한 스택 네비게이션 패턴입니다.
+
+```tsx
+<SafeArea edges={['top']}>
+  <NavigationBar
+    title="Settings"
+    leftAction={{
+      label: 'Back',
+      onPress: () => navigation.goBack(),
+    }}
+    rightActions={[
+      { label: 'Save', onPress: handleSave },
+    ]}
+  />
+  <ScrollView>
+    <SettingsContent />
+  </ScrollView>
+</SafeArea>
+```
+
+## Modal Flow
+
+Dialog + BottomSheet를 활용한 모달 패턴입니다.
+
+```tsx
+// Confirmation
+<Dialog
+  visible={showConfirm}
+  title="Delete item?"
+  message="This action cannot be undone."
+  actions={[
+    { label: 'Cancel', variant: 'secondary', onPress: close },
+    { label: 'Delete', variant: 'danger', onPress: handleDelete },
+  ]}
+  onDismiss={close}
+/>
+
+// Selection
+<BottomSheet
+  visible={showOptions}
+  onDismiss={() => setShowOptions(false)}
+  title="Sort by"
+>
+  <RadioGroup
+    options={sortOptions}
+    value={sortBy}
+    onChange={setSortBy}
+  />
+</BottomSheet>
+```

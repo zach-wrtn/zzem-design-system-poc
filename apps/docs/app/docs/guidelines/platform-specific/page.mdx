@@ -1,0 +1,46 @@
+# Platform-Specific
+
+iOS와 Android 플랫폼별 차이점과 대응 가이드라인입니다.
+
+## Platform Abstraction
+
+ZZEM Design System은 `platform` 유틸리티를 통해 플랫폼 분기를 추상화합니다.
+
+```tsx
+import { platform } from '@zzem-design-system/engine';
+
+// Platform check
+platform.isIOS    // boolean
+platform.isAndroid // boolean
+
+// Platform-specific values
+const style = platform.select({
+  ios: { shadowOpacity: 0.1 },
+  android: { elevation: 2 },
+});
+
+// Haptic feedback (iOS only)
+platform.haptic('medium');
+```
+
+## Key Differences
+
+| Feature | iOS | Android |
+|---------|-----|---------|
+| Elevation | shadowColor/Offset/Opacity/Radius | elevation (number) |
+| Press feedback | Opacity change | Ripple effect |
+| Haptic | UIImpactFeedbackGenerator | N/A |
+| Safe area | Dynamic notch/home indicator | Status bar only |
+| Navigation | Push/pop stack | Activity stack |
+
+## Rules
+
+1. **직접 `Platform.OS` 사용 금지** — `platform.select()` 또는 `platform.isIOS` 사용
+2. **플랫폼별 파일 분리 지양** — `platform.select()`로 인라인 처리
+3. **Haptic은 iOS에서만 동작** — Android에서는 자동으로 no-op
+
+## Component Behaviors
+
+- **Pressable**: iOS에서 opacity 변화, Android에서 ripple effect 자동 적용
+- **Card**: iOS에서 shadow properties, Android에서 elevation 자동 매핑
+- **SafeArea**: 플랫폼별 기본 inset 값 자동 계산

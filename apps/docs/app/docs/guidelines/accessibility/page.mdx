@@ -1,0 +1,42 @@
+# Accessibility
+
+ZZEM Design System의 접근성 가이드라인입니다.
+
+## Principles
+
+1. **모든 인터랙티브 요소에 레이블 제공** — `accessibilityLabel` 필수
+2. **적절한 Role 지정** — 컴포넌트가 자동으로 설정하지만, 커스텀 시 확인 필요
+3. **상태 정보 전달** — disabled, checked, selected 등 상태를 `accessibilityState`로 전달
+4. **충분한 색상 대비** — WCAG AA 기준 (4.5:1) 충족
+
+## Component Roles
+
+| Component | Role | Notes |
+|-----------|------|-------|
+| Button | `button` | 자동 설정 |
+| IconButton | `button` | accessibilityLabel 필수 |
+| Checkbox | `checkbox` | checked 상태 자동 전달 |
+| Switch | `switch` | checked 상태 자동 전달 |
+| RadioGroup | `radiogroup` | 각 옵션은 `radio` role |
+| Dialog | `alert` | 포커스 자동 이동 |
+| Toast | `alert` | liveRegion="polite" |
+| TabBar | `tablist` | 각 탭은 `tab` role |
+
+## Do/Don't
+
+### Do
+- IconButton 사용 시 항상 `accessibilityLabel` 제공
+- 에러 메시지를 TextInput의 `error` prop으로 전달
+- Badge의 `accessibilityLabel`에 의미 있는 설명 추가
+
+### Don't
+- 색상만으로 상태를 구분하지 않음
+- 접근성 레이블에 "버튼", "이미지" 등 role 정보 반복하지 않음
+- 중요 정보를 placeholder에만 넣지 않음
+
+## Testing
+
+```bash
+# 접근성 테스트 실행
+pnpm test:a11y
+```

@@ -1,0 +1,52 @@
+# Form Patterns
+
+폼 구성 시 ZZEM 컴포넌트를 효과적으로 조합하는 패턴입니다.
+
+## Basic Form
+
+TextInput, Checkbox, Button을 조합하여 기본 폼을 구성합니다.
+
+```tsx
+<VStack gap={16}>
+  <TextInput label="Email" placeholder="you@example.com" />
+  <TextInput label="Password" secureTextEntry />
+  <Checkbox checked={agreed} onChange={setAgreed} label="약관에 동의합니다" />
+  <Button onPress={handleSubmit} fullWidth>
+    Sign Up
+  </Button>
+</VStack>
+```
+
+## Validation Pattern
+
+에러 상태를 활용한 폼 검증 패턴입니다.
+
+```tsx
+<TextInput
+  label="Email"
+  value={email}
+  onChangeText={setEmail}
+  error={emailError}
+  helperText="We'll never share your email."
+/>
+```
+
+## Form with RadioGroup
+
+RadioGroup으로 옵션을 선택하는 폼 패턴입니다.
+
+```tsx
+<VStack gap={16}>
+  <RadioGroup
+    label="Size"
+    options={[
+      { value: 'sm', label: 'Small' },
+      { value: 'md', label: 'Medium' },
+      { value: 'lg', label: 'Large' },
+    ]}
+    value={size}
+    onChange={setSize}
+  />
+  <Button onPress={handleConfirm}>Confirm</Button>
+</VStack>
+```
