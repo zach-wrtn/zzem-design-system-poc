@@ -1,0 +1,13 @@
+{
+  "component": {
+    "radio": {
+      "size": { "value": 20 },
+      "dotSize": { "value": 10 },
+      "border": {
+        "unselected": { "value": "{color.border.default}" },
+        "selected": { "value": "{color.interactive.primary}" }
+      },
+      "dot": { "value": "{color.interactive.primary}" }
+    }
+  }
+}

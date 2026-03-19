@@ -1,0 +1,11 @@
+{
+  "component": {
+    "bottomSheet": {
+      "radius": { "value": "{radius.xl}" },
+      "handleWidth": { "value": 36 },
+      "handleHeight": { "value": 4 },
+      "background": { "value": "{color.background.primary}" },
+      "overlay": { "value": "rgba(0, 0, 0, 0.5)" }
+    }
+  }
+}

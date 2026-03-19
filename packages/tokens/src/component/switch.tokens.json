@@ -1,0 +1,17 @@
+{
+  "component": {
+    "switch": {
+      "track": {
+        "width": { "value": 48 },
+        "height": { "value": 28 },
+        "radius": { "value": "{radius.full}" },
+        "on": { "value": "{color.interactive.primary}" },
+        "off": { "value": "{color.background.tertiary}" }
+      },
+      "thumb": {
+        "size": { "value": 24 },
+        "color": { "value": "{color.white}" }
+      }
+    }
+  }
+}

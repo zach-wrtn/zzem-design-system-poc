@@ -1,0 +1,17 @@
+{
+  "component": {
+    "checkbox": {
+      "size": { "value": 20 },
+      "radius": { "value": "{radius.sm}" },
+      "border": {
+        "unchecked": { "value": "{color.border.default}" },
+        "checked": { "value": "{color.interactive.primary}" }
+      },
+      "background": {
+        "unchecked": { "value": "transparent" },
+        "checked": { "value": "{color.interactive.primary}" }
+      },
+      "checkmark": { "value": "{color.white}" }
+    }
+  }
+}

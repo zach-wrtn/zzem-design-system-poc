@@ -27,7 +27,43 @@
     {
       "name": "Button",
       "category": "inputs",
-      "description": "Primary action button with variants",
+      "description": "Primary action button with variants (primary, secondary, ghost, danger)",
+      "status": "stable"
+    },
+    {
+      "name": "IconButton",
+      "category": "inputs",
+      "description": "Icon-only button with variants (filled, outlined, ghost)",
+      "status": "stable"
+    },
+    {
+      "name": "TextInput",
+      "category": "inputs",
+      "description": "Text input with label, helper text, error state",
+      "status": "stable"
+    },
+    {
+      "name": "Checkbox",
+      "category": "inputs",
+      "description": "Checkbox with label and controlled state",
+      "status": "stable"
+    },
+    {
+      "name": "Switch",
+      "category": "inputs",
+      "description": "Toggle switch with label",
+      "status": "stable"
+    },
+    {
+      "name": "RadioGroup",
+      "category": "inputs",
+      "description": "Radio button group with vertical/horizontal layout",
+      "status": "stable"
+    },
+    {
+      "name": "Avatar",
+      "category": "display",
+      "description": "User avatar with image or initials fallback",
       "status": "stable"
     },
     {
@@ -43,6 +79,54 @@
       "status": "stable"
     },
     {
+      "name": "Tag",
+      "category": "display",
+      "description": "Label tag with variants and optional close button",
+      "status": "stable"
+    },
+    {
+      "name": "Toast",
+      "category": "feedback",
+      "description": "Temporary notification with auto-dismiss",
+      "status": "stable"
+    },
+    {
+      "name": "Dialog",
+      "category": "feedback",
+      "description": "Modal dialog with title, message, and actions",
+      "status": "stable"
+    },
+    {
+      "name": "BottomSheet",
+      "category": "feedback",
+      "description": "Slide-up bottom sheet with drag handle",
+      "status": "stable"
+    },
+    {
+      "name": "Snackbar",
+      "category": "feedback",
+      "description": "Bottom snackbar with optional action",
+      "status": "stable"
+    },
+    {
+      "name": "Header",
+      "category": "navigation",
+      "description": "Page header with title and left/right slots",
+      "status": "stable"
+    },
+    {
+      "name": "TabBar",
+      "category": "navigation",
+      "description": "Bottom tab bar with badge support",
+      "status": "stable"
+    },
+    {
+      "name": "NavigationBar",
+      "category": "navigation",
+      "description": "iOS-style navigation bar with large title support",
+      "status": "stable"
+    },
+    {
       "name": "Divider",
       "category": "layout",
       "description": "Visual separator line",
@@ -52,6 +136,12 @@
       "name": "Spacer",
       "category": "layout",
       "description": "Fixed-size spacing element",
+      "status": "stable"
+    },
+    {
+      "name": "SafeArea",
+      "category": "layout",
+      "description": "Safe area wrapper with configurable edges",
       "status": "stable"
     }
   ]

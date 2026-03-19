@@ -1,0 +1,21 @@
+{
+  "component": {
+    "tabBar": {
+      "height": { "value": 48 },
+      "background": { "value": "{color.background.primary}" },
+      "border": { "value": "{color.border.default}" },
+      "active": {
+        "color": { "value": "{color.interactive.primary}" },
+        "fontWeight": { "value": "{typography.fontWeight.medium}" }
+      },
+      "inactive": {
+        "color": { "value": "{color.text.tertiary}" },
+        "fontWeight": { "value": "{typography.fontWeight.regular}" }
+      },
+      "badge": {
+        "background": { "value": "{color.status.danger}" },
+        "text": { "value": "{color.white}" }
+      }
+    }
+  }
+}

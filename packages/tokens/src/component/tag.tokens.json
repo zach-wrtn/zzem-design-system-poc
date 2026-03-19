@@ -1,0 +1,10 @@
+{
+  "component": {
+    "tag": {
+      "radius": { "value": "{radius.sm}" },
+      "paddingHorizontal": { "value": "{spacing.4}" },
+      "paddingVertical": { "value": "{spacing.1}" },
+      "fontSize": { "value": "{typography.fontSize.xs}" }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "component": {
+    "avatar": {
+      "sizes": {
+        "xs": { "value": 24 },
+        "sm": { "value": 32 },
+        "md": { "value": 40 },
+        "lg": { "value": 56 },
+        "xl": { "value": 72 }
+      },
+      "background": { "value": "{color.background.tertiary}" },
+      "text": { "value": "{color.text.secondary}" },
+      "border": {
+        "width": { "value": 2 },
+        "color": { "value": "{color.background.primary}" }
+      }
+    }
+  }
+}

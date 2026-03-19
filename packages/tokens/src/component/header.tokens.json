@@ -1,0 +1,14 @@
+{
+  "component": {
+    "header": {
+      "height": { "value": 56 },
+      "background": { "value": "{color.background.primary}" },
+      "border": { "value": "{color.border.default}" },
+      "title": {
+        "fontSize": { "value": "{typography.fontSize.lg}" },
+        "fontWeight": { "value": "{typography.fontWeight.semibold}" },
+        "color": { "value": "{color.text.primary}" }
+      }
+    }
+  }
+}
