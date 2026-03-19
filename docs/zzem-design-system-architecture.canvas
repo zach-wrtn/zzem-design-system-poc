@@ -1,0 +1,437 @@
+{
+  "nodes": [
+    {
+      "id": "group-external-inputs",
+      "type": "group",
+      "x": -200,
+      "y": -600,
+      "width": 1200,
+      "height": 200,
+      "color": "0",
+      "label": "External inputs"
+    },
+    {
+      "id": "figma",
+      "type": "text",
+      "x": -140,
+      "y": -540,
+      "width": 300,
+      "height": 120,
+      "color": "1",
+      "text": "## Figma Variables\n\n- Figma Variables API\n- Design token 원본\n- 디자이너 작업물\n- `figma/figma.config.json`"
+    },
+    {
+      "id": "designers",
+      "type": "text",
+      "x": 260,
+      "y": -540,
+      "width": 300,
+      "height": 120,
+      "color": "0",
+      "text": "## Designers & Developers\n\n- 디자이너: Figma에서 토큰/컴포넌트 설계\n- 개발자: Agent와 함께 구현\n- PO: 문서 사이트에서 시스템 확인"
+    },
+    {
+      "id": "app-code",
+      "type": "text",
+      "x": 660,
+      "y": -540,
+      "width": 300,
+      "height": 120,
+      "color": "3",
+      "text": "## App code (zzem)\n\n```tsx\nimport { Button } from '@zzem-design-system/components';\nimport { tokens } from '@zzem-design-system/tokens';\nimport { ZDSProvider } from '@zzem-design-system/engine';\n```"
+    },
+    {
+      "id": "group-zds",
+      "type": "group",
+      "x": -200,
+      "y": -320,
+      "width": 1200,
+      "height": 1580,
+      "color": "6",
+      "label": "zzem-design-system/"
+    },
+    {
+      "id": "group-core-pipeline",
+      "type": "group",
+      "x": -160,
+      "y": -260,
+      "width": 540,
+      "height": 1060,
+      "color": "6",
+      "label": "Core pipeline"
+    },
+    {
+      "id": "tokens",
+      "type": "text",
+      "x": -120,
+      "y": -200,
+      "width": 460,
+      "height": 200,
+      "color": "6",
+      "text": "## @zzem-design-system/tokens\n\nDesign Tokens — Single Source of Truth\n\n**3-Tier 구조**\n- `src/primitive/` — colors.json, typography.json, spacing.json, radius.json\n- `src/semantic/` — color.semantic.json, typography.semantic.json\n- `src/component/` — button.tokens.json, input.tokens.json\n\n**Output**: `tokens.ts` (RN용) · `tokens.json` (MCP용) · `figma-variables.json`"
+    },
+    {
+      "id": "engine",
+      "type": "text",
+      "x": -120,
+      "y": 60,
+      "width": 460,
+      "height": 200,
+      "color": "6",
+      "text": "## @zzem-design-system/engine\n\nStyling Engine for React Native\n\n- `ZDSProvider.tsx` — 테마 컨텍스트 Provider\n- `useTheme.ts` — 테마 Hook\n- `createStyles.ts` — StyleSheet 팩토리 (토큰 자동 주입)\n- `platform.ts` — iOS/Android 분기 추상화\n- `responsive.ts` — 반응형 유틸리티"
+    },
+    {
+      "id": "components",
+      "type": "text",
+      "x": -120,
+      "y": 320,
+      "width": 300,
+      "height": 260,
+      "color": "5",
+      "text": "## @zzem-design-system/components\n\nUI Components\n\n**primitives/** — Box, Text, Pressable, Stack\n**inputs/** — Button, TextInput, Checkbox, Switch\n**display/** — Avatar, Badge, Card, Tag\n**feedback/** — Toast, Dialog, BottomSheet\n**navigation/** — TabBar, Header\n**layout/** — Divider, Spacer, SafeArea\n\n`__template__/` — Agent용 스캐폴딩 템플릿"
+    },
+    {
+      "id": "icons",
+      "type": "text",
+      "x": 220,
+      "y": 320,
+      "width": 200,
+      "height": 200,
+      "color": "5",
+      "text": "## @zzem-design-system/icons\n\nIcon Components\n\n- `src/svg/` — SVG 원본\n- `src/generated/` — RN 변환 결과\n- `Icon.tsx` — 범용 아이콘\n- `scripts/generate.ts` — SVG→RN 자동 변환"
+    },
+    {
+      "id": "docs",
+      "type": "text",
+      "x": -120,
+      "y": 640,
+      "width": 460,
+      "height": 140,
+      "color": "0",
+      "text": "## docs/\n\nAgent-readable 문서화\n\n- `foundations/` — color.md, typography.md, spacing.md\n- `components/` — 컴포넌트별 스펙 (Props, Tokens, Do/Don't)\n- `patterns/` — form-patterns.md, list-patterns.md\n- `guidelines/` — accessibility.md, platform-specific.md"
+    },
+    {
+      "id": "group-agent-infra",
+      "type": "group",
+      "x": 440,
+      "y": -260,
+      "width": 520,
+      "height": 1060,
+      "color": "4",
+      "label": "Agent infrastructure"
+    },
+    {
+      "id": "claude-md",
+      "type": "text",
+      "x": 480,
+      "y": -200,
+      "width": 440,
+      "height": 200,
+      "color": "4",
+      "text": "## CLAUDE.md / AGENTS.md\n\nAgent Project Memory\n\n**CLAUDE.md 포함 내용**\n- Tech stack, package map\n- Architecture rules (토큰 필수, 하드코딩 금지)\n- Component creation workflow (Docs-First)\n- Token naming convention\n- Forbidden patterns\n\n**AGENTS.md** — 5개 Sub-agent 오케스트레이션 규칙"
+    },
+    {
+      "id": "mcp-server",
+      "type": "text",
+      "x": 480,
+      "y": 60,
+      "width": 440,
+      "height": 220,
+      "color": "4",
+      "text": "## @zzem-design-system/mcp-server\n\nMCP Server — AI Agent 인터페이스\n\n**5 Tools**\n1. `zds_get_component` — 컴포넌트 props/토큰/가이드라인 조회\n2. `zds_get_tokens` — 토큰 값 조회 (tier/category 필터)\n3. `zds_validate_usage` — 코드 스니펫 규칙 준수 검증\n4. `zds_generate_snippet` — 시나리오 기반 코드 생성\n5. `zds_search_guidelines` — 가이드라인/패턴 검색"
+    },
+    {
+      "id": "eslint-plugin",
+      "type": "text",
+      "x": 480,
+      "y": 340,
+      "width": 440,
+      "height": 180,
+      "color": "1",
+      "text": "## @zzem-design-system/eslint-plugin\n\nAgent 생성 코드 자동 검증\n\n**5 Rules**\n1. `@zzem-design-system/no-hardcoded-colors` — HEX 직접 사용 금지\n2. `@zzem-design-system/no-hardcoded-spacing` — 숫자 직접 사용 금지\n3. `@zzem-design-system/use-design-tokens` — 토큰 참조 강제\n4. `@zzem-design-system/no-inline-styles` — createStyles 사용 강제\n5. `@zzem-design-system/valid-component-props` — Props enum 검증"
+    },
+    {
+      "id": "group-sub-agents",
+      "type": "group",
+      "x": 480,
+      "y": 580,
+      "width": 440,
+      "height": 200,
+      "color": "1",
+      "label": ".claude/agents/"
+    },
+    {
+      "id": "agent-component-gen",
+      "type": "text",
+      "x": 500,
+      "y": 620,
+      "width": 190,
+      "height": 60,
+      "color": "1",
+      "text": "### component-generator\n스펙 문서 → 컴포넌트 생성"
+    },
+    {
+      "id": "agent-token-sync",
+      "type": "text",
+      "x": 710,
+      "y": 620,
+      "width": 190,
+      "height": 60,
+      "color": "1",
+      "text": "### token-sync\nFigma Variables ↔ JSON 동기화"
+    },
+    {
+      "id": "agent-design-verify",
+      "type": "text",
+      "x": 500,
+      "y": 700,
+      "width": 190,
+      "height": 60,
+      "color": "1",
+      "text": "### design-verifier\n구현 ↔ 디자인 스펙 검증"
+    },
+    {
+      "id": "agent-a11y",
+      "type": "text",
+      "x": 710,
+      "y": 700,
+      "width": 190,
+      "height": 60,
+      "color": "1",
+      "text": "### a11y-auditor\nWCAG 2.1 AA 접근성 감사"
+    },
+    {
+      "id": "group-automation",
+      "type": "group",
+      "x": -160,
+      "y": 860,
+      "width": 1120,
+      "height": 340,
+      "color": "3",
+      "label": "Automation & governance"
+    },
+    {
+      "id": "ci-cd",
+      "type": "text",
+      "x": -120,
+      "y": 920,
+      "width": 340,
+      "height": 120,
+      "color": "3",
+      "text": "## CI/CD Quality Gates\n\n| Gate | Tool | 기준 |\n|------|------|------|\n| Lint | @zzem-design-system/eslint-plugin | 0 violations |\n| Type | TypeScript strict | 0 errors |\n| Test | Jest + RNTL | 80%+ coverage |\n| A11y | axe-core RN | 0 critical |"
+    },
+    {
+      "id": "codemod",
+      "type": "text",
+      "x": 260,
+      "y": 920,
+      "width": 240,
+      "height": 100,
+      "color": "3",
+      "text": "## @zzem-design-system/codemod\n\nMigration Scripts\n\n- Breaking change 자동 대응\n- Token rename transform\n- Component API migration"
+    },
+    {
+      "id": "metrics",
+      "type": "text",
+      "x": 540,
+      "y": 920,
+      "width": 360,
+      "height": 100,
+      "color": "3",
+      "text": "## Governance metrics\n\n- 컴포넌트별 import 횟수 추적\n- 하드코딩 비율 (ESLint violations / total)\n- Agent 생성 코드 lint pass rate\n- 커스텀 스타일 오버라이드 비율"
+    },
+    {
+      "id": "commands",
+      "type": "text",
+      "x": -120,
+      "y": 1060,
+      "width": 340,
+      "height": 100,
+      "color": "3",
+      "text": "## Slash commands\n\n- `/new-component` — 스펙 기반 컴포넌트 생성\n- `/sync-tokens` — Figma ↔ Token 동기화\n- `/audit-component {name}` — 디자인 스펙 검증"
+    },
+    {
+      "id": "token-flow",
+      "type": "text",
+      "x": 260,
+      "y": 1060,
+      "width": 640,
+      "height": 100,
+      "color": "6",
+      "text": "## Token pipeline flow\n\n```\nFigma Variables → primitive/*.json → semantic/*.json → component/*.json\n    ↓ (Style Dictionary)\ntokens.ts (RN) + tokens.json (MCP) + figma-variables.json (sync back)\n```"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-figma-tokens",
+      "fromNode": "figma",
+      "toNode": "tokens",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "6",
+      "label": "sync (Figma Variables API)"
+    },
+    {
+      "id": "e-tokens-engine",
+      "fromNode": "tokens",
+      "toNode": "engine",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "6",
+      "label": "import tokens"
+    },
+    {
+      "id": "e-engine-components",
+      "fromNode": "engine",
+      "toNode": "components",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "5",
+      "label": "createStyles + useTheme"
+    },
+    {
+      "id": "e-engine-icons",
+      "fromNode": "engine",
+      "toNode": "icons",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "5",
+      "label": "theme context"
+    },
+    {
+      "id": "e-tokens-mcp",
+      "fromNode": "tokens",
+      "toNode": "mcp-server",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "4",
+      "label": "tokens.json 참조"
+    },
+    {
+      "id": "e-docs-mcp",
+      "fromNode": "docs",
+      "toNode": "mcp-server",
+      "fromSide": "right",
+      "toSide": "left",
+      "color": "4",
+      "label": "guidelines 참조"
+    },
+    {
+      "id": "e-claudemd-mcp",
+      "fromNode": "claude-md",
+      "toNode": "mcp-server",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "4",
+      "label": "context injection"
+    },
+    {
+      "id": "e-mcp-eslint",
+      "fromNode": "mcp-server",
+      "toNode": "eslint-plugin",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "1",
+      "label": "validate_usage → lint"
+    },
+    {
+      "id": "e-mcp-agents",
+      "fromNode": "mcp-server",
+      "toNode": "group-sub-agents",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "1",
+      "label": "tool access"
+    },
+    {
+      "id": "e-eslint-ci",
+      "fromNode": "eslint-plugin",
+      "toNode": "ci-cd",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "3",
+      "label": "quality gate"
+    },
+    {
+      "id": "e-components-app",
+      "fromNode": "components",
+      "toNode": "app-code",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "color": "3",
+      "label": "import @zzem-design-system/components"
+    },
+    {
+      "id": "e-icons-app",
+      "fromNode": "icons",
+      "toNode": "app-code",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "color": "3",
+      "label": "import @zzem-design-system/icons"
+    },
+    {
+      "id": "e-designers-claudemd",
+      "fromNode": "designers",
+      "toNode": "claude-md",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "0",
+      "label": "context 작성"
+    },
+    {
+      "id": "e-agent-gen-components",
+      "fromNode": "agent-component-gen",
+      "toNode": "components",
+      "fromSide": "left",
+      "toSide": "right",
+      "color": "1",
+      "label": "generates"
+    },
+    {
+      "id": "e-agent-sync-tokens",
+      "fromNode": "agent-token-sync",
+      "toNode": "tokens",
+      "fromSide": "left",
+      "toSide": "right",
+      "color": "1",
+      "label": "syncs"
+    },
+    {
+      "id": "e-agent-verify-components",
+      "fromNode": "agent-design-verify",
+      "toNode": "components",
+      "fromSide": "left",
+      "toSide": "right",
+      "color": "1",
+      "label": "verifies"
+    },
+    {
+      "id": "e-figma-agent-sync",
+      "fromNode": "figma",
+      "toNode": "agent-token-sync",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "1",
+      "label": "Figma MCP"
+    },
+    {
+      "id": "e-components-ci",
+      "fromNode": "components",
+      "toNode": "ci-cd",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "color": "3",
+      "label": "test + snapshot"
+    },
+    {
+      "id": "e-docs-components",
+      "fromNode": "docs",
+      "toNode": "components",
+      "fromSide": "top",
+      "toSide": "bottom",
+      "color": "0",
+      "label": "spec → impl (Docs-First)"
+    }
+  ]
+}
