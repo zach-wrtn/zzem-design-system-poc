@@ -44,7 +44,8 @@ export default async function ComponentPage({ params }: PageProps) {
       <h2 id="import" className="text-2xl font-semibold text-gray-900 dark:text-white mt-6 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">
         Import
       </h2>
-      <await CodeBlock code={data.importPath} language="tsx" />
+      {/* @ts-expect-error Async Server Component */}
+      <CodeBlock code={data.importPath} language="tsx" />
 
       <h2 id="props" className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">
         Props
@@ -54,7 +55,8 @@ export default async function ComponentPage({ params }: PageProps) {
       <h2 id="usage" className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4 border-b border-gray-200 dark:border-gray-700 pb-2">
         Usage
       </h2>
-      <await CodeBlock code={data.usage} language="tsx" title="Example" />
+      {/* @ts-expect-error Async Server Component */}
+      <CodeBlock code={data.usage} language="tsx" title="Example" />
     </div>
   );
 
