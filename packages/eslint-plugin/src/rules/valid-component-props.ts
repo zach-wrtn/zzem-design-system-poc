@@ -9,6 +9,44 @@ const VALID_PROPS: Record<string, Record<string, string[]>> = {
     variant: ['default', 'success', 'warning', 'danger', 'info'],
     size: ['sm', 'md'],
   },
+  IconButton: {
+    variant: ['filled', 'outlined', 'ghost'],
+    size: ['sm', 'md', 'lg'],
+  },
+  TextInput: {
+    size: ['sm', 'md', 'lg'],
+  },
+  Avatar: {
+    size: ['xs', 'sm', 'md', 'lg', 'xl'],
+  },
+  Tag: {
+    variant: ['default', 'primary', 'success', 'warning', 'danger'],
+  },
+  Toast: {
+    variant: ['info', 'success', 'warning', 'danger'],
+    position: ['top', 'bottom'],
+  },
+  Text: {
+    variant: [
+      'heading-xl', 'heading-lg', 'heading-md', 'heading-sm',
+      'body-lg', 'body-md', 'body-sm',
+      'label-lg', 'label-md', 'label-sm',
+      'caption',
+    ],
+    align: ['left', 'center', 'right'],
+  },
+  Stack: {
+    direction: ['horizontal', 'vertical'],
+  },
+  RadioGroup: {
+    direction: ['vertical', 'horizontal'],
+  },
+  Divider: {
+    orientation: ['horizontal', 'vertical'],
+  },
+  Spacer: {
+    direction: ['horizontal', 'vertical'],
+  },
 };
 
 export const validComponentProps: Rule.RuleModule = {
