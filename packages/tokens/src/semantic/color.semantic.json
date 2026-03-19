@@ -1,0 +1,47 @@
+{
+  "color": {
+    "background": {
+      "primary": { "value": "{color.white}" },
+      "secondary": { "value": "{color.gray.50}" },
+      "tertiary": { "value": "{color.gray.100}" },
+      "inverse": { "value": "{color.gray.900}" }
+    },
+    "text": {
+      "primary": { "value": "{color.gray.900}" },
+      "secondary": { "value": "{color.gray.600}" },
+      "tertiary": { "value": "{color.gray.400}" },
+      "inverse": { "value": "{color.white}" },
+      "link": { "value": "{color.blue.600}" },
+      "danger": { "value": "{color.red.600}" },
+      "success": { "value": "{color.green.600}" },
+      "warning": { "value": "{color.yellow.600}" }
+    },
+    "interactive": {
+      "primary": { "value": "{color.blue.600}" },
+      "primaryHover": { "value": "{color.blue.700}" },
+      "primaryPressed": { "value": "{color.blue.800}" },
+      "secondary": { "value": "{color.gray.200}" },
+      "secondaryHover": { "value": "{color.gray.300}" },
+      "secondaryPressed": { "value": "{color.gray.400}" },
+      "danger": { "value": "{color.red.600}" },
+      "dangerHover": { "value": "{color.red.700}" },
+      "dangerPressed": { "value": "{color.red.800}" }
+    },
+    "border": {
+      "default": { "value": "{color.gray.200}" },
+      "strong": { "value": "{color.gray.400}" },
+      "focus": { "value": "{color.blue.500}" },
+      "danger": { "value": "{color.red.500}" }
+    },
+    "status": {
+      "success": { "value": "{color.green.500}" },
+      "successBg": { "value": "{color.green.50}" },
+      "warning": { "value": "{color.yellow.500}" },
+      "warningBg": { "value": "{color.yellow.50}" },
+      "danger": { "value": "{color.red.500}" },
+      "dangerBg": { "value": "{color.red.50}" },
+      "info": { "value": "{color.blue.500}" },
+      "infoBg": { "value": "{color.blue.50}" }
+    }
+  }
+}

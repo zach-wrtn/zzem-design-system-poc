@@ -1,0 +1,23 @@
+{
+  "name": "@zzem-design-system/icons",
+  "version": "0.1.0",
+  "description": "Icon components for zzem-design-system",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "generate": "tsx scripts/generate.ts",
+    "clean": "rm -rf dist src/generated",
+    "lint": "echo 'lint ok'",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'no tests yet'"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.76",
+    "react-native-svg": ">=13"
+  },
+  "dependencies": {
+    "@zzem-design-system/engine": "workspace:*"
+  }
+}

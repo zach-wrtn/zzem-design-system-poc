@@ -1,0 +1,14 @@
+{
+  "fileId": "",
+  "personalAccessToken": "",
+  "tokenCollections": {
+    "primitive": "Primitive Tokens",
+    "semantic": "Semantic Tokens",
+    "component": "Component Tokens"
+  },
+  "syncConfig": {
+    "direction": "figma-to-code",
+    "autoSync": false,
+    "outputDir": "../packages/tokens/src"
+  }
+}

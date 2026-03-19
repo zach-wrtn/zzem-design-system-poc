@@ -1,0 +1,58 @@
+{
+  "components": [
+    {
+      "name": "Box",
+      "category": "primitives",
+      "description": "Basic layout container",
+      "status": "stable"
+    },
+    {
+      "name": "Text",
+      "category": "primitives",
+      "description": "Typography component with semantic variants",
+      "status": "stable"
+    },
+    {
+      "name": "Pressable",
+      "category": "primitives",
+      "description": "Touchable wrapper with platform-specific feedback",
+      "status": "stable"
+    },
+    {
+      "name": "Stack",
+      "category": "primitives",
+      "description": "Flex layout with gap support (HStack, VStack)",
+      "status": "stable"
+    },
+    {
+      "name": "Button",
+      "category": "inputs",
+      "description": "Primary action button with variants",
+      "status": "stable"
+    },
+    {
+      "name": "Badge",
+      "category": "display",
+      "description": "Status indicator badge",
+      "status": "stable"
+    },
+    {
+      "name": "Card",
+      "category": "display",
+      "description": "Content container with elevation",
+      "status": "stable"
+    },
+    {
+      "name": "Divider",
+      "category": "layout",
+      "description": "Visual separator line",
+      "status": "stable"
+    },
+    {
+      "name": "Spacer",
+      "category": "layout",
+      "description": "Fixed-size spacing element",
+      "status": "stable"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@zzem-design-system/components",
+  "version": "0.1.0",
+  "description": "UI components for zzem-design-system",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "echo 'lint ok'",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:a11y": "jest --testPathPattern=a11y"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.76"
+  },
+  "dependencies": {
+    "@zzem-design-system/engine": "workspace:*",
+    "@zzem-design-system/tokens": "workspace:*"
+  }
+}

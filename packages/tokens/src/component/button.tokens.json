@@ -1,0 +1,79 @@
+{
+  "component": {
+    "button": {
+      "radius": { "value": "{radius.md}" },
+      "primary": {
+        "background": {
+          "default": { "value": "{color.interactive.primary}" },
+          "pressed": { "value": "{color.interactive.primaryPressed}" }
+        },
+        "label": {
+          "default": { "value": "{color.white}" }
+        },
+        "border": {
+          "width": { "value": 0 },
+          "color": { "value": "transparent" }
+        }
+      },
+      "secondary": {
+        "background": {
+          "default": { "value": "{color.interactive.secondary}" },
+          "pressed": { "value": "{color.interactive.secondaryPressed}" }
+        },
+        "label": {
+          "default": { "value": "{color.text.primary}" }
+        },
+        "border": {
+          "width": { "value": 1 },
+          "color": { "value": "{color.border.default}" }
+        }
+      },
+      "ghost": {
+        "background": {
+          "default": { "value": "transparent" },
+          "pressed": { "value": "{color.interactive.secondary}" }
+        },
+        "label": {
+          "default": { "value": "{color.interactive.primary}" }
+        },
+        "border": {
+          "width": { "value": 0 },
+          "color": { "value": "transparent" }
+        }
+      },
+      "danger": {
+        "background": {
+          "default": { "value": "{color.interactive.danger}" },
+          "pressed": { "value": "{color.interactive.dangerPressed}" }
+        },
+        "label": {
+          "default": { "value": "{color.white}" }
+        },
+        "border": {
+          "width": { "value": 0 },
+          "color": { "value": "transparent" }
+        }
+      },
+      "size": {
+        "sm": {
+          "height": { "value": 32 },
+          "paddingHorizontal": { "value": "{spacing.6}" },
+          "fontSize": { "value": "{typography.fontSize.sm}" },
+          "lineHeight": { "value": "{typography.lineHeight.sm}" }
+        },
+        "md": {
+          "height": { "value": 40 },
+          "paddingHorizontal": { "value": "{spacing.8}" },
+          "fontSize": { "value": "{typography.fontSize.md}" },
+          "lineHeight": { "value": "{typography.lineHeight.md}" }
+        },
+        "lg": {
+          "height": { "value": 48 },
+          "paddingHorizontal": { "value": "{spacing.12}" },
+          "fontSize": { "value": "{typography.fontSize.lg}" },
+          "lineHeight": { "value": "{typography.lineHeight.lg}" }
+        }
+      }
+    }
+  }
+}

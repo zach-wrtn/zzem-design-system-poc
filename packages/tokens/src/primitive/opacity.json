@@ -1,0 +1,9 @@
+{
+  "opacity": {
+    "transparent": { "value": 0 },
+    "disabled": { "value": 0.4 },
+    "pressed": { "value": 0.7 },
+    "hover": { "value": 0.8 },
+    "opaque": { "value": 1 }
+  }
+}

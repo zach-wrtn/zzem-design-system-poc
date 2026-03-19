@@ -1,0 +1,65 @@
+{
+  "text": {
+    "heading": {
+      "xl": {
+        "fontSize": { "value": "{typography.fontSize.4xl}" },
+        "lineHeight": { "value": "{typography.lineHeight.4xl}" },
+        "fontWeight": { "value": "{typography.fontWeight.bold}" }
+      },
+      "lg": {
+        "fontSize": { "value": "{typography.fontSize.3xl}" },
+        "lineHeight": { "value": "{typography.lineHeight.3xl}" },
+        "fontWeight": { "value": "{typography.fontWeight.bold}" }
+      },
+      "md": {
+        "fontSize": { "value": "{typography.fontSize.2xl}" },
+        "lineHeight": { "value": "{typography.lineHeight.2xl}" },
+        "fontWeight": { "value": "{typography.fontWeight.semibold}" }
+      },
+      "sm": {
+        "fontSize": { "value": "{typography.fontSize.xl}" },
+        "lineHeight": { "value": "{typography.lineHeight.xl}" },
+        "fontWeight": { "value": "{typography.fontWeight.semibold}" }
+      }
+    },
+    "body": {
+      "lg": {
+        "fontSize": { "value": "{typography.fontSize.lg}" },
+        "lineHeight": { "value": "{typography.lineHeight.lg}" },
+        "fontWeight": { "value": "{typography.fontWeight.regular}" }
+      },
+      "md": {
+        "fontSize": { "value": "{typography.fontSize.md}" },
+        "lineHeight": { "value": "{typography.lineHeight.md}" },
+        "fontWeight": { "value": "{typography.fontWeight.regular}" }
+      },
+      "sm": {
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "lineHeight": { "value": "{typography.lineHeight.sm}" },
+        "fontWeight": { "value": "{typography.fontWeight.regular}" }
+      }
+    },
+    "label": {
+      "lg": {
+        "fontSize": { "value": "{typography.fontSize.md}" },
+        "lineHeight": { "value": "{typography.lineHeight.md}" },
+        "fontWeight": { "value": "{typography.fontWeight.medium}" }
+      },
+      "md": {
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "lineHeight": { "value": "{typography.lineHeight.sm}" },
+        "fontWeight": { "value": "{typography.fontWeight.medium}" }
+      },
+      "sm": {
+        "fontSize": { "value": "{typography.fontSize.xs}" },
+        "lineHeight": { "value": "{typography.lineHeight.xs}" },
+        "fontWeight": { "value": "{typography.fontWeight.medium}" }
+      }
+    },
+    "caption": {
+      "fontSize": { "value": "{typography.fontSize.xs}" },
+      "lineHeight": { "value": "{typography.lineHeight.xs}" },
+      "fontWeight": { "value": "{typography.fontWeight.regular}" }
+    }
+  }
+}

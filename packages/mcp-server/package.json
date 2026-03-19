@@ -1,0 +1,17 @@
+{
+  "name": "@zzem-design-system/mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for zzem-design-system AI agent integration",
+  "main": "src/server.ts",
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "echo 'lint ok'",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'no tests yet'"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

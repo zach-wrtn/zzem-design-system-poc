@@ -1,0 +1,18 @@
+{
+  "name": "@zzem-design-system/tokens",
+  "version": "0.1.0",
+  "description": "Design tokens for zzem-design-system (SSOT)",
+  "main": "output/tokens.ts",
+  "types": "output/tokens.ts",
+  "scripts": {
+    "build": "tsx transforms/react-native.ts",
+    "clean": "rm -rf output/*.ts output/*.json",
+    "lint": "echo 'no lint for tokens'",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'no tests for tokens'"
+  },
+  "files": ["output/"],
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "component": {
+    "card": {
+      "radius": { "value": "{radius.lg}" },
+      "background": { "value": "{color.background.primary}" },
+      "border": {
+        "color": { "value": "{color.border.default}" },
+        "width": { "value": 1 }
+      },
+      "padding": { "value": "{spacing.8}" },
+      "elevation": { "value": "{elevation.sm}" }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "zzem-design-system",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Agent-Driven React Native Design System",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:tokens": "pnpm --filter @zzem-design-system/tokens build",
+    "test": "pnpm -r test",
+    "test:a11y": "pnpm -r test:a11y",
+    "lint": "pnpm -r lint",
+    "storybook": "pnpm --filter @zzem-design-system/storybook start",
+    "new-component": "tsx scripts/generate-component.ts",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r clean"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

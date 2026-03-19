@@ -1,0 +1,38 @@
+{
+  "component": {
+    "input": {
+      "radius": { "value": "{radius.md}" },
+      "background": {
+        "default": { "value": "{color.background.primary}" },
+        "disabled": { "value": "{color.background.secondary}" }
+      },
+      "border": {
+        "default": { "value": "{color.border.default}" },
+        "focus": { "value": "{color.border.focus}" },
+        "error": { "value": "{color.border.danger}" }
+      },
+      "text": {
+        "default": { "value": "{color.text.primary}" },
+        "placeholder": { "value": "{color.text.tertiary}" },
+        "disabled": { "value": "{color.text.tertiary}" }
+      },
+      "size": {
+        "sm": {
+          "height": { "value": 36 },
+          "paddingHorizontal": { "value": "{spacing.6}" },
+          "fontSize": { "value": "{typography.fontSize.sm}" }
+        },
+        "md": {
+          "height": { "value": 44 },
+          "paddingHorizontal": { "value": "{spacing.8}" },
+          "fontSize": { "value": "{typography.fontSize.md}" }
+        },
+        "lg": {
+          "height": { "value": 52 },
+          "paddingHorizontal": { "value": "{spacing.10}" },
+          "fontSize": { "value": "{typography.fontSize.lg}" }
+        }
+      }
+    }
+  }
+}

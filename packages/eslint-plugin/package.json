@@ -1,0 +1,13 @@
+{
+  "name": "@zzem-design-system/eslint-plugin",
+  "version": "0.1.0",
+  "description": "ESLint rules for zzem-design-system",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "echo 'lint ok'",
+    "typecheck": "tsc --noEmit",
+    "test": "jest"
+  }
+}

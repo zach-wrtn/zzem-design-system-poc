@@ -1,0 +1,39 @@
+{
+  "typography": {
+    "fontFamily": {
+      "default": { "value": "System" },
+      "mono": { "value": "Courier" }
+    },
+    "fontSize": {
+      "xs": { "value": 12 },
+      "sm": { "value": 14 },
+      "md": { "value": 16 },
+      "lg": { "value": 18 },
+      "xl": { "value": 20 },
+      "2xl": { "value": 24 },
+      "3xl": { "value": 30 },
+      "4xl": { "value": 36 }
+    },
+    "lineHeight": {
+      "xs": { "value": 16 },
+      "sm": { "value": 20 },
+      "md": { "value": 24 },
+      "lg": { "value": 28 },
+      "xl": { "value": 28 },
+      "2xl": { "value": 32 },
+      "3xl": { "value": 36 },
+      "4xl": { "value": 40 }
+    },
+    "fontWeight": {
+      "regular": { "value": "400" },
+      "medium": { "value": "500" },
+      "semibold": { "value": "600" },
+      "bold": { "value": "700" }
+    },
+    "letterSpacing": {
+      "tight": { "value": -0.5 },
+      "normal": { "value": 0 },
+      "wide": { "value": 0.5 }
+    }
+  }
+}

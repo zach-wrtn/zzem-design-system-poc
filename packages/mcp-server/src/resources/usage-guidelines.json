@@ -1,0 +1,34 @@
+{
+  "rules": [
+    {
+      "id": "no-hardcoded-colors",
+      "description": "Do not use hex color values directly. Always reference @zzem-design-system/tokens.",
+      "bad": "style={{ color: '#FF0000' }}",
+      "good": "style={{ color: tokens.color.danger.default }}"
+    },
+    {
+      "id": "no-hardcoded-spacing",
+      "description": "Do not use raw number values for spacing. Use spacing tokens.",
+      "bad": "style={{ padding: 16 }}",
+      "good": "style={{ padding: tokens.spacing[8] }}"
+    },
+    {
+      "id": "use-create-styles",
+      "description": "Use createStyles from @zzem-design-system/engine instead of StyleSheet.create.",
+      "bad": "const styles = StyleSheet.create({ ... })",
+      "good": "const useStyles = createStyles((tokens, params) => ({ ... }))"
+    },
+    {
+      "id": "use-platform-util",
+      "description": "Use platform utilities from @zzem-design-system/engine for platform-specific code.",
+      "bad": "Platform.OS === 'ios' ? iOSStyle : androidStyle",
+      "good": "platform.select({ ios: iOSStyle, android: androidStyle })"
+    },
+    {
+      "id": "named-exports-only",
+      "description": "Use named exports only. Default exports are forbidden.",
+      "bad": "export default Button",
+      "good": "export { Button }"
+    }
+  ]
+}

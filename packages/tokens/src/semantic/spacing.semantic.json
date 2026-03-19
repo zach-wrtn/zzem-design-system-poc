@@ -1,0 +1,21 @@
+{
+  "spacing": {
+    "component": {
+      "gap": { "value": "{spacing.4}" },
+      "padding": { "value": "{spacing.8}" },
+      "paddingSmall": { "value": "{spacing.4}" },
+      "paddingLarge": { "value": "{spacing.12}" }
+    },
+    "layout": {
+      "gutter": { "value": "{spacing.8}" },
+      "sectionGap": { "value": "{spacing.16}" },
+      "screenPadding": { "value": "{spacing.8}" }
+    },
+    "inline": {
+      "xs": { "value": "{spacing.2}" },
+      "sm": { "value": "{spacing.4}" },
+      "md": { "value": "{spacing.6}" },
+      "lg": { "value": "{spacing.8}" }
+    }
+  }
+}
