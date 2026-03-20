@@ -4,7 +4,12 @@
       "radius": { "value": "{radius.md}" },
       "padding": { "value": "{spacing.8}" },
       "background": { "value": "{color.background.inverse}" },
-      "text": { "value": "{color.text.inverse}" }
+      "text": { "value": "{color.text.inverse}" },
+      "elevation": { "value": "{elevation.lg}" },
+      "indicator": {
+        "width": { "value": 4 },
+        "height": { "value": 20 }
+      }
     }
   }
 }

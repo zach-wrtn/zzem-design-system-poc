@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { tokens } from '@zzem-design-system/tokens/output/tokens';
+import { useTheme } from '@zzem-design-system/engine';
 import type { DividerProps } from './Divider.types';
 
 export const Divider = ({
@@ -8,16 +8,17 @@ export const Divider = ({
   style,
   testID,
 }: DividerProps) => {
+  const { tokens } = useTheme();
   const isHorizontal = orientation === 'horizontal';
 
   return (
     <View
       style={[
         {
-          backgroundColor: tokens.color.border.default,
+          backgroundColor: tokens.component.divider.color,
           ...(isHorizontal
-            ? { height: 1, width: '100%' as const }
-            : { width: 1, height: '100%' as const }),
+            ? { height: tokens.component.divider.thickness, width: '100%' as const }
+            : { width: tokens.component.divider.thickness, height: '100%' as const }),
         },
         style,
       ]}

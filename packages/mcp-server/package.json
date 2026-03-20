@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "MCP server for zzem-design-system AI agent integration",
   "main": "src/server.ts",
+  "bin": {
+    "zds-mcp": "src/server.ts"
+  },
   "scripts": {
     "start": "tsx src/server.ts",
     "build": "tsc",

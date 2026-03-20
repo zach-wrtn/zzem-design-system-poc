@@ -66,4 +66,81 @@ describe('IconButton', () => {
     const button = screen.getByTestId('icon-btn');
     expect(button.props.accessibilityLabel).toBe('Favorite');
   });
+
+  describe('sizes', () => {
+    it.each(['sm', 'md', 'lg'] as const)(
+      'renders %s size without crashing',
+      (size) => {
+        render(
+          <IconButton
+            icon={<RNText>★</RNText>}
+            accessibilityLabel="Star"
+            size={size}
+            testID={`icon-btn-${size}`}
+          />,
+        );
+        expect(screen.getByTestId(`icon-btn-${size}`)).toBeTruthy();
+      },
+    );
+  });
+
+  describe('variants', () => {
+    it.each(['filled', 'outlined', 'ghost'] as const)(
+      'renders %s variant without crashing',
+      (variant) => {
+        render(
+          <IconButton
+            icon={<RNText>★</RNText>}
+            accessibilityLabel="Star"
+            variant={variant}
+            testID={`icon-btn-${variant}`}
+          />,
+        );
+        expect(screen.getByTestId(`icon-btn-${variant}`)).toBeTruthy();
+      },
+    );
+  });
+
+  describe('accessibility', () => {
+    it('applies accessibilityRole button', () => {
+      render(
+        <IconButton
+          icon={<RNText>★</RNText>}
+          accessibilityLabel="Star"
+          testID="icon-btn"
+        />,
+      );
+      const button = screen.getByTestId('icon-btn');
+      expect(button.props.accessibilityRole).toBe('button');
+    });
+
+    it('sets accessibilityState disabled when disabled', () => {
+      render(
+        <IconButton
+          icon={<RNText>★</RNText>}
+          accessibilityLabel="Star"
+          disabled
+          testID="icon-btn"
+        />,
+      );
+      const button = screen.getByTestId('icon-btn');
+      expect(button.props.accessibilityState).toEqual(
+        expect.objectContaining({ disabled: true }),
+      );
+    });
+
+    it('sets accessibilityState not disabled by default', () => {
+      render(
+        <IconButton
+          icon={<RNText>★</RNText>}
+          accessibilityLabel="Star"
+          testID="icon-btn"
+        />,
+      );
+      const button = screen.getByTestId('icon-btn');
+      expect(button.props.accessibilityState).toEqual(
+        expect.objectContaining({ disabled: false }),
+      );
+    });
+  });
 });

@@ -13,8 +13,8 @@ export const useStyles = createStyles(
       opacity: disabled ? tokens.opacity.disabled : 1,
     },
     track: {
-      width: 48,
-      height: 28,
+      width: tokens.component.switch.track.width,
+      height: tokens.component.switch.track.height,
       borderRadius: tokens.radius.full,
       backgroundColor: value
         ? tokens.color.interactive.primary
@@ -23,8 +23,8 @@ export const useStyles = createStyles(
       padding: 2,
     },
     thumb: {
-      width: 24,
-      height: 24,
+      width: tokens.component.switch.thumb.size,
+      height: tokens.component.switch.thumb.size,
       borderRadius: tokens.radius.full,
       backgroundColor: tokens.color.white,
       alignSelf: value ? ('flex-end' as const) : ('flex-start' as const),

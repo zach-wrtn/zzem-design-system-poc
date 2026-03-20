@@ -33,7 +33,7 @@ export const useStyles = createStyles(
       },
       label: {
         fontSize: sizeTokens.fontSize,
-        fontWeight: '600' as const,
+        fontWeight: tokens.typography.fontWeight.semibold,
         lineHeight: sizeTokens.lineHeight,
         color: variantTokens.label.default,
       },

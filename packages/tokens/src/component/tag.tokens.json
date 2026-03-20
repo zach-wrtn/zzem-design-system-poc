@@ -4,7 +4,11 @@
       "radius": { "value": "{radius.sm}" },
       "paddingHorizontal": { "value": "{spacing.4}" },
       "paddingVertical": { "value": "{spacing.1}" },
-      "fontSize": { "value": "{typography.fontSize.xs}" }
+      "fontSize": { "value": "{typography.fontSize.xs}" },
+      "closeButton": {
+        "size": { "value": 14 },
+        "fontSize": { "value": 10 }
+      }
     }
   }
 }

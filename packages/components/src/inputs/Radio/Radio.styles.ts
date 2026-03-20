@@ -26,8 +26,8 @@ export const useStyles = createStyles(
       alignItems: 'center' as const,
     },
     radio: {
-      width: 20,
-      height: 20,
+      width: tokens.component.radio.size,
+      height: tokens.component.radio.size,
       borderRadius: tokens.radius.full,
       borderWidth: 2,
       borderColor: tokens.color.border.default,
@@ -38,8 +38,8 @@ export const useStyles = createStyles(
       borderColor: tokens.color.interactive.primary,
     },
     radioDot: {
-      width: 10,
-      height: 10,
+      width: tokens.component.radio.innerSize,
+      height: tokens.component.radio.innerSize,
       borderRadius: tokens.radius.full,
       backgroundColor: tokens.color.interactive.primary,
     },

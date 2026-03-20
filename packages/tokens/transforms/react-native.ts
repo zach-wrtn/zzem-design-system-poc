@@ -105,22 +105,31 @@ function main() {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
-  // Read all token files
-  let allTokens: TokenGroup = {};
+  // Resolve tokens per-tier in order: primitive → semantic → component
+  // Each tier resolves against the already-resolved tokens from previous tiers,
+  // ensuring chained references (component → semantic → primitive) resolve fully.
   const tiers = ['primitive', 'semantic', 'component'];
+  let resolvedTokens: TokenGroup = {};
 
   for (const tier of tiers) {
     const tierDir = path.join(srcDir, tier);
     const files = getAllJsonFiles(tierDir);
+
+    let tierTokens: TokenGroup = {};
     for (const file of files) {
       const data = readJsonFile(file);
-      allTokens = deepMerge(allTokens, data);
+      tierTokens = deepMerge(tierTokens, data);
     }
+
+    // Merge raw tier tokens into the resolved pool for lookup
+    const lookupTokens = deepMerge({ ...resolvedTokens }, tierTokens);
+    // Resolve this tier's references against the pool (previous tiers are already resolved)
+    const resolvedTier = resolveTokens(tierTokens, lookupTokens);
+    // Merge resolved tier into the cumulative resolved tokens
+    resolvedTokens = deepMerge(resolvedTokens, resolvedTier);
   }
 
-  // Resolve references
-  const resolved = resolveTokens(allTokens, allTokens);
-  const flattened = flattenValues(resolved);
+  const flattened = flattenValues(resolvedTokens);
 
   // Write JSON output
   fs.writeFileSync(

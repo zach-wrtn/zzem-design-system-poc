@@ -1,0 +1,8 @@
+{
+  "component": {
+    "divider": {
+      "thickness": { "value": 1 },
+      "color": { "value": "{color.border.default}" }
+    }
+  }
+}

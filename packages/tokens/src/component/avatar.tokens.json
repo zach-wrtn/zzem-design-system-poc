@@ -8,6 +8,13 @@
         "lg": { "value": 56 },
         "xl": { "value": 72 }
       },
+      "fontSize": {
+        "xs": { "value": 10 },
+        "sm": { "value": 12 },
+        "md": { "value": 16 },
+        "lg": { "value": 20 },
+        "xl": { "value": 28 }
+      },
       "background": { "value": "{color.background.tertiary}" },
       "text": { "value": "{color.text.secondary}" },
       "border": {

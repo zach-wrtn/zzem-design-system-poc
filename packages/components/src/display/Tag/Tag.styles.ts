@@ -57,14 +57,14 @@ export const useStyles = createStyles(
       },
       closeButton: {
         marginLeft: tokens.spacing[2],
-        width: 14,
-        height: 14,
+        width: tokens.component.tag.closeButton.size,
+        height: tokens.component.tag.closeButton.size,
         borderRadius: tokens.radius.full,
         alignItems: 'center' as const,
         justifyContent: 'center' as const,
       },
       closeIcon: {
-        fontSize: 10,
+        fontSize: tokens.component.tag.closeButton.fontSize,
         color: colors.text,
         fontWeight: tokens.typography.fontWeight.bold as '700',
       },

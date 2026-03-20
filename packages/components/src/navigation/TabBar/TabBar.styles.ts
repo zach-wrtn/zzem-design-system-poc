@@ -8,9 +8,9 @@ export const useStyles = createStyles(
   (tokens, { itemCount }: StyleParams) => ({
     container: {
       flexDirection: 'row' as const,
-      backgroundColor: tokens.color.background.primary,
+      backgroundColor: tokens.component.tabBar.background,
       borderTopWidth: 1,
-      borderTopColor: tokens.color.border.default,
+      borderTopColor: tokens.component.tabBar.border,
       paddingBottom: tokens.spacing[4],
     },
     tab: {
@@ -19,7 +19,7 @@ export const useStyles = createStyles(
       justifyContent: 'center' as const,
       paddingTop: tokens.spacing[4],
       paddingBottom: tokens.spacing[2],
-      minHeight: 48,
+      minHeight: tokens.component.tabBar.height,
     },
     iconContainer: {
       position: 'relative' as const,
@@ -28,31 +28,31 @@ export const useStyles = createStyles(
     labelActive: {
       fontSize: tokens.typography.fontSize.xs,
       lineHeight: tokens.typography.lineHeight.xs,
-      fontWeight: tokens.typography.fontWeight.medium as '500',
-      color: tokens.color.interactive.primary,
+      fontWeight: tokens.component.tabBar.active.fontWeight as '500',
+      color: tokens.component.tabBar.active.color,
     },
     labelInactive: {
       fontSize: tokens.typography.fontSize.xs,
       lineHeight: tokens.typography.lineHeight.xs,
-      fontWeight: tokens.typography.fontWeight.regular as '400',
-      color: tokens.color.text.tertiary,
+      fontWeight: tokens.component.tabBar.inactive.fontWeight as '400',
+      color: tokens.component.tabBar.inactive.color,
     },
     badge: {
       position: 'absolute' as const,
       top: -4,
       right: -8,
-      minWidth: 16,
-      height: 16,
+      minWidth: tokens.component.tabBar.badge.minWidth,
+      height: tokens.component.tabBar.badge.height,
       borderRadius: tokens.radius.full,
-      backgroundColor: tokens.color.status.danger,
+      backgroundColor: tokens.component.tabBar.badge.background,
       alignItems: 'center' as const,
       justifyContent: 'center' as const,
       paddingHorizontal: tokens.spacing[2],
     },
     badgeText: {
-      fontSize: 10,
+      fontSize: tokens.component.tabBar.badge.fontSize,
       fontWeight: tokens.typography.fontWeight.bold as '700',
-      color: tokens.color.white,
+      color: tokens.component.tabBar.badge.text,
     },
   }),
 );

@@ -13,8 +13,8 @@ export const useStyles = createStyles(
       opacity: disabled ? tokens.opacity.disabled : 1,
     },
     checkbox: {
-      width: 20,
-      height: 20,
+      width: tokens.component.checkbox.size,
+      height: tokens.component.checkbox.size,
       borderRadius: tokens.radius.sm,
       borderWidth: 2,
       borderColor: checked
@@ -27,8 +27,8 @@ export const useStyles = createStyles(
       justifyContent: 'center' as const,
     },
     checkmark: {
-      width: 10,
-      height: 6,
+      width: tokens.component.checkbox.size / 2,
+      height: tokens.component.checkbox.size * 0.3,
       borderLeftWidth: 2,
       borderBottomWidth: 2,
       borderColor: tokens.color.white,

@@ -9,11 +9,11 @@ export const useStyles = createStyles(
     container: {
       flexDirection: 'row' as const,
       alignItems: 'center' as const,
-      height: 56,
+      height: tokens.component.header.height,
       paddingHorizontal: tokens.spacing[8],
-      backgroundColor: tokens.color.background.primary,
+      backgroundColor: tokens.component.header.background,
       borderBottomWidth: border ? 1 : 0,
-      borderBottomColor: tokens.color.border.default,
+      borderBottomColor: tokens.component.header.border,
     },
     left: {
       minWidth: 40,
@@ -24,10 +24,10 @@ export const useStyles = createStyles(
       alignItems: 'center' as const,
     },
     title: {
-      fontSize: tokens.typography.fontSize.lg,
+      fontSize: tokens.component.header.title.fontSize,
       lineHeight: tokens.typography.lineHeight.lg,
-      fontWeight: tokens.typography.fontWeight.semibold as '600',
-      color: tokens.color.text.primary,
+      fontWeight: tokens.component.header.title.fontWeight as '600',
+      color: tokens.component.header.title.color,
     },
     right: {
       minWidth: 40,

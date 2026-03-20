@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { View, Pressable } from 'react-native';
 import { Text } from '../../primitives/Text';
 import { useStyles } from './Toast.styles';
@@ -17,13 +17,15 @@ export const Toast = ({
   testID,
 }: ToastProps) => {
   const styles = useStyles({ variant, position });
+  const onDismissRef = useRef(onDismiss);
+  onDismissRef.current = onDismiss;
 
   useEffect(() => {
-    if (visible && duration > 0 && onDismiss) {
-      const timer = setTimeout(onDismiss, duration);
+    if (visible && duration > 0 && onDismissRef.current) {
+      const timer = setTimeout(() => onDismissRef.current?.(), duration);
       return () => clearTimeout(timer);
     }
-  }, [visible, duration, onDismiss]);
+  }, [visible, duration]);
 
   if (!visible) return null;
 

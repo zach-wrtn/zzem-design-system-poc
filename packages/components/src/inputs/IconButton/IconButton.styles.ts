@@ -7,15 +7,12 @@ interface StyleParams {
   disabled: boolean;
 }
 
-const sizeMap = {
-  sm: { size: 32, iconSize: 16 },
-  md: { size: 40, iconSize: 20 },
-  lg: { size: 48, iconSize: 24 },
-};
-
 export const useStyles = createStyles(
   (tokens, { variant, size, disabled }: StyleParams) => {
-    const sizeValues = sizeMap[size];
+    const sizeValues = {
+      size: tokens.component.iconbutton.size[size].container,
+      iconSize: tokens.component.iconbutton.size[size].icon,
+    };
 
     const variantStyles = {
       filled: {

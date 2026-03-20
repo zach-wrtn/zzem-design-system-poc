@@ -1,30 +1,19 @@
 import React, { forwardRef } from 'react';
 import { View, Pressable } from 'react-native';
-import { tokens } from '@zzem-design-system/tokens/output/tokens';
-import { platform } from '@zzem-design-system/engine';
+import { useStyles } from './Card.styles';
 import type { CardProps } from './Card.types';
-
-const cardStyle = {
-  backgroundColor: tokens.component.card.background,
-  borderRadius: tokens.component.card.radius,
-  borderWidth: tokens.component.card.border.width,
-  borderColor: tokens.component.card.border.color,
-  padding: tokens.component.card.padding,
-  ...platform.select({
-    ios: tokens.component.card.elevation,
-    android: { elevation: (tokens.component.card.elevation as { elevation: number }).elevation },
-  }),
-};
 
 export const Card = forwardRef<View, CardProps>(
   ({ children, onPress, accessibilityLabel, style, testID }, ref) => {
+    const styles = useStyles({});
+
     if (onPress) {
       return (
         <Pressable
           ref={ref}
           style={({ pressed }) => [
-            cardStyle,
-            pressed && { opacity: tokens.opacity.pressed },
+            styles.card,
+            pressed && styles.pressed,
             style,
           ]}
           onPress={onPress}
@@ -40,7 +29,7 @@ export const Card = forwardRef<View, CardProps>(
     return (
       <View
         ref={ref}
-        style={[cardStyle, style]}
+        style={[styles.card, style]}
         accessibilityLabel={accessibilityLabel}
         testID={testID}
       >

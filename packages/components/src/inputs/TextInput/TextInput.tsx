@@ -1,6 +1,6 @@
 import React, { forwardRef, useState } from 'react';
 import { TextInput as RNTextInput, View } from 'react-native';
-import { tokens } from '@zzem-design-system/tokens/output/tokens';
+import { useTheme } from '@zzem-design-system/engine';
 import { Text } from '../../primitives/Text';
 import { useStyles } from './TextInput.styles';
 import type { TextInputProps } from './TextInput.types';
@@ -24,6 +24,7 @@ export const TextInput = forwardRef<RNTextInput, TextInputProps>(
     ref,
   ) => {
     const [isFocused, setIsFocused] = useState(false);
+    const { tokens } = useTheme();
     const hasError = !!error;
     const styles = useStyles({ size, disabled, hasError, isFocused });
 

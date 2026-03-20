@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { View, Platform, StatusBar } from 'react-native';
-import { tokens } from '@zzem-design-system/tokens/output/tokens';
+import { useTheme } from '@zzem-design-system/engine';
 import type { SafeAreaProps } from './SafeArea.types';
 
 // Fallback safe area insets (for use without react-native-safe-area-context)
@@ -15,13 +15,16 @@ export const SafeArea = forwardRef<View, SafeAreaProps>(
   (
     {
       edges = ['top', 'bottom'],
-      backgroundColor = tokens.color.background.primary,
+      backgroundColor,
       children,
       style,
       testID,
     },
     ref,
   ) => {
+    const { tokens } = useTheme();
+    const bgColor = backgroundColor ?? tokens.color.background.primary;
+
     const paddingStyle = {
       paddingTop: edges.includes('top') ? DEFAULT_INSETS.top : 0,
       paddingBottom: edges.includes('bottom') ? DEFAULT_INSETS.bottom : 0,
@@ -35,7 +38,7 @@ export const SafeArea = forwardRef<View, SafeAreaProps>(
         style={[
           {
             flex: 1,
-            backgroundColor,
+            backgroundColor: bgColor,
           },
           paddingStyle,
           style,

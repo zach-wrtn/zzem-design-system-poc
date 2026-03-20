@@ -1,13 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import { tokens } from '@zzem-design-system/tokens/output/tokens';
+import { useTheme } from '@zzem-design-system/engine';
+import { iconRegistry, type IconName } from './registry';
 
 export interface IconProps {
-  /** Icon name */
-  name: string;
-  /** Icon size */
+  /** Icon name from the registry */
+  name: IconName;
+  /** Icon size in pixels */
   size?: number;
-  /** Icon color (semantic token value) */
+  /** Icon color (defaults to text.primary token) */
   color?: string;
   /** Accessibility label */
   accessibilityLabel?: string;
@@ -16,23 +17,44 @@ export interface IconProps {
 }
 
 /**
- * Generic Icon component.
- * For type-safe icons, use the generated icon components from @zzem-design-system/icons.
+ * Renders an icon from the zzem-design-system icon registry.
+ *
+ * Usage:
+ * ```tsx
+ * import { Icon } from '@zzem-design-system/icons';
+ * <Icon name="search" size={24} />
+ * ```
  */
 export const Icon = ({
   name,
   size = 24,
-  color = tokens.color.text.primary,
+  color,
   accessibilityLabel,
   testID,
 }: IconProps) => {
+  const { tokens } = useTheme();
+  const resolvedColor = color ?? tokens.color.text.primary;
+  const SvgComponent = iconRegistry[name];
+
+  if (!SvgComponent) {
+    return (
+      <View
+        style={{ width: size, height: size }}
+        accessibilityRole="image"
+        accessibilityLabel={accessibilityLabel ?? name}
+        testID={testID}
+      />
+    );
+  }
+
   return (
     <View
-      style={{ width: size, height: size }}
       accessibilityRole="image"
       accessibilityLabel={accessibilityLabel ?? name}
       testID={testID}
-    />
+    >
+      <SvgComponent width={size} height={size} color={resolvedColor} />
+    </View>
   );
 };
 

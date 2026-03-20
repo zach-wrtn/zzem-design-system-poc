@@ -1,0 +1,39 @@
+{
+  "component": {
+    "badge": {
+      "radius": { "value": "{radius.full}" },
+      "size": {
+        "sm": {
+          "paddingHorizontal": { "value": "{spacing.4}" },
+          "paddingVertical": { "value": "{spacing.1}" },
+          "fontSize": { "value": "{typography.fontSize.xs}" }
+        },
+        "md": {
+          "paddingHorizontal": { "value": "{spacing.6}" },
+          "paddingVertical": { "value": "{spacing.2}" },
+          "fontSize": { "value": "{typography.fontSize.sm}" }
+        }
+      },
+      "default": {
+        "background": { "value": "{color.background.tertiary}" },
+        "text": { "value": "{color.text.primary}" }
+      },
+      "success": {
+        "background": { "value": "{color.status.successBg}" },
+        "text": { "value": "{color.status.success}" }
+      },
+      "warning": {
+        "background": { "value": "{color.status.warningBg}" },
+        "text": { "value": "{color.status.warning}" }
+      },
+      "danger": {
+        "background": { "value": "{color.status.dangerBg}" },
+        "text": { "value": "{color.status.danger}" }
+      },
+      "info": {
+        "background": { "value": "{color.status.infoBg}" },
+        "text": { "value": "{color.status.info}" }
+      }
+    }
+  }
+}

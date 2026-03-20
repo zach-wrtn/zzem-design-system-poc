@@ -1,0 +1,31 @@
+{
+  "component": {
+    "snackbar": {
+      "radius": { "value": "{radius.md}" },
+      "paddingHorizontal": { "value": "{spacing.8}" },
+      "paddingVertical": { "value": "{spacing.6}" },
+      "background": { "value": "{color.background.inverse}" },
+      "shadow": {
+        "opacity": { "value": 0.15 },
+        "radius": { "value": 6 },
+        "offsetY": { "value": 2 },
+        "elevation": { "value": 6 }
+      },
+      "message": {
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "lineHeight": { "value": "{typography.lineHeight.sm}" },
+        "color": { "value": "{color.text.inverse}" }
+      },
+      "action": {
+        "marginLeft": { "value": "{spacing.6}" },
+        "fontSize": { "value": "{typography.fontSize.sm}" },
+        "fontWeight": { "value": "{typography.fontWeight.semibold}" },
+        "color": { "value": "{color.interactive.primary}" }
+      },
+      "wrapper": {
+        "bottom": { "value": "{spacing.12}" },
+        "horizontal": { "value": "{spacing.8}" }
+      }
+    }
+  }
+}

@@ -5,7 +5,8 @@
       "padding": { "value": "{spacing.12}" },
       "background": { "value": "{color.background.primary}" },
       "maxWidth": { "value": 320 },
-      "overlay": { "value": "rgba(0, 0, 0, 0.5)" }
+      "overlay": { "value": "rgba(0, 0, 0, 0.5)" },
+      "elevation": { "value": "{elevation.xl}" }
     }
   }
 }

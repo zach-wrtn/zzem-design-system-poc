@@ -14,7 +14,10 @@
       },
       "badge": {
         "background": { "value": "{color.status.danger}" },
-        "text": { "value": "{color.white}" }
+        "text": { "value": "{color.white}" },
+        "minWidth": { "value": 16 },
+        "height": { "value": 16 },
+        "fontSize": { "value": 10 }
       }
     }
   }

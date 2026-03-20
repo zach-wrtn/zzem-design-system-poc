@@ -1,0 +1,39 @@
+{
+  "component": {
+    "iconbutton": {
+      "radius": { "value": "{radius.full}" },
+      "size": {
+        "sm": {
+          "container": { "value": 32 },
+          "icon": { "value": 16 }
+        },
+        "md": {
+          "container": { "value": 40 },
+          "icon": { "value": 20 }
+        },
+        "lg": {
+          "container": { "value": 48 },
+          "icon": { "value": 24 }
+        }
+      },
+      "filled": {
+        "background": { "value": "{color.interactive.primary}" },
+        "borderWidth": { "value": 0 },
+        "borderColor": { "value": "transparent" },
+        "iconColor": { "value": "{color.white}" }
+      },
+      "outlined": {
+        "background": { "value": "transparent" },
+        "borderWidth": { "value": 1 },
+        "borderColor": { "value": "{color.border.default}" },
+        "iconColor": { "value": "{color.text.primary}" }
+      },
+      "ghost": {
+        "background": { "value": "transparent" },
+        "borderWidth": { "value": 0 },
+        "borderColor": { "value": "transparent" },
+        "iconColor": { "value": "{color.text.primary}" }
+      }
+    }
+  }
+}
